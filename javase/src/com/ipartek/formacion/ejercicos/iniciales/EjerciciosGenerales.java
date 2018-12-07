@@ -232,24 +232,99 @@ public class EjerciciosGenerales {
 //
 //			1, 1, 2, 3, 5, 8, 13, .....  
 
-		Scanner sc = new Scanner(System.in);
-        int numero,fibo1,fibo2,i;
-        do{
-            System.out.print("Introduce numero mayor que 1: ");
-            numero = sc.nextInt();
-        }while(numero<=1);
-        System.out.println("Los " + numero + " primeros términos de la serie de Fibonacci son:"); 
+//		Scanner sc = new Scanner(System.in);
+//        int numero,fibo1,fibo2,i;
+//        do{
+//            System.out.print("Introduce numero mayor que 1: ");
+//            numero = sc.nextInt();
+//        }while(numero<=1);
+//        System.out.println("Los " + numero + " primeros términos de la serie de Fibonacci son:"); 
+//
+//        fibo1=1;
+//        fibo2=1; 
+//
+//        System.out.print(fibo1 + " ");
+//        for(i=2;i<=numero;i++){
+//             System.out.print(fibo2 + " ");
+//             fibo2 = fibo1 + fibo2;
+//             fibo1 = fibo2 - fibo1;
+//        }
+//        System.out.println();
+//        sc.close();
+		
+		//Ejercicio 9
+//		Decimal a binario en java
+		
+//		En esta entrada vamos a escribir el programa java para convertir un número de decimal a binario.
+//
+//		Para escribir el programa nos vamos a basar en la forma clásica de pasar de decimal a binario, o sea, dividir el número entre 2 y quedarnos con el resto de la división. Esta cifra, que será un cero o un uno, es el dígito de menos peso (más a la derecha) del número binario. A continuación volvemos a dividir el cociente que hemos obtenido entre 2 y nos quedamos con el resto de la división. Esta cifra será la segunda por la derecha del número binario. Esta operación se repite hasta que obtengamos un cero como cociente.
 
-        fibo1=1;
-        fibo2=1; 
-
-        System.out.print(fibo1 + " ");
-        for(i=2;i<=numero;i++){
-             System.out.print(fibo2 + " ");
-             fibo2 = fibo1 + fibo2;
-             fibo1 = fibo2 - fibo1;
-        }
-        System.out.println();
-        sc.close();
-	}
+//		int numero, exp, digito;
+//        double binario;
+//        Scanner sc = new Scanner(System.in);
+//
+//        do{  
+//            System.out.print("Introduce un numero entero >= 0: ");
+//            numero = sc.nextInt();
+//        }while(numero<0);
+//
+//        exp=0;
+//        binario=0;
+//        while(numero!=0){
+//                digito = numero % 2;            
+//                binario = binario + digito * Math.pow(10, exp);   
+//                exp++;
+//                numero = numero/2;
+//        }
+//        System.out.printf("Binario: %.0f %n", binario);
+//        sc.close();
+		
+		//Ejercicio 10
+		
+//		CONVERTIR UN NÚMERO DE BINARIO A DECIMAL EN JAVA
+//		El programa para pasar un número expresado en binario a decimal se basa en la forma tradicional de hacerlo. Los dígitos del número binario ocupan una posición que se numera de derecha a izquierda empezando por cero. La posición del dígito más a la derecha es la 0.
+		
+//		long numero, aux, digito, decimal;
+//	     int exponente;
+//	     boolean esBinario;
+//	     Scanner sc = new Scanner(System.in);
+//
+//	    //Leer un número por teclado y comprobar que es binario
+//	     do {
+//	          System.out.print("Introduce un numero binario: ");
+//	          numero = sc.nextLong();
+//	          //comprobamos que sea un número binario es decir
+//	          //que este formado solo por ceros y unos
+//	          esBinario = true;
+//	          aux = numero;
+//	          while (aux != 0) {
+//	                     digito = aux % 10; //última cifra del números
+//	                     if (digito != 0 && digito != 1) { //si no es 0 ó 1
+//	                          esBinario = false; //no es un número binario
+//	                          System.out.println("No es binario");
+//	                     }
+//	                     aux = aux / 10; //quitamos la última cifra para repetir el proceso
+//	           }
+//	      } while (!esBinario); //se vuelve a pedir si no es binario
+//
+//	      //proceso para pasar de binario a decimal
+//	      exponente = 0;
+//	      decimal = 0; //será el equivalente en base decimal
+//	      while (numero != 0) {
+//	                //se toma la última cifra
+//	                digito = numero % 10;
+//	                //se multiplica por la potencia de 2 correspondiente y se suma al número
+//	                decimal = decimal + digito * (int) Math.pow(2, exponente);
+//	                //se aumenta el exponente
+//	                exponente++;
+//	                //se quita la última cifra para repetir el proceso
+//	                numero = numero / 10;
+//	      }
+//	      System.out.println("Decimal: " + decimal);
+//	      
+//	      sc.close();
+		
+    }
+	
 }
+
